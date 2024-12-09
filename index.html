@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+    <div class="header">CALCULATOR</div>
+    <div class="display">
+        
+        <div class="pantalla">
+            <textarea id="display_textarea" rows="1" cols="4"></textarea>
+        </div>
+        <button class="button_7" onclick="writenumber(7)">7</button>
+        <button class="button_8" onclick="writenumber(8)">8</button>
+        <button class="button_9" onclick="writenumber(9)">9</button>
+        <button class="button_sum" onclick="writeoperation('+')">+</button>
+        <button class ="button_4" onclick="writenumber(4)">4</button>
+        <button class="button_5" onclick="writenumber(5)">5</button>
+        <button class="button_6" onclick="writenumber(6)">6</button> 
+        <button class="button_less" onclick="writeoperation('-')">-</button>
+        <button class="button_1" onclick="writenumber(1)">1</button>
+        <button class="button_2" onclick="writenumber(2)">2</button>
+        <button class="button_3" onclick="writenumber(3)">3</button>
+        <button class="button_multiply" onclick="writeoperation('*')">*</button>
+        <button class="button_0" onclick="writenumber(0)">0</button>
+        <button class="button_divide" onclick="writeoperation('/')">/</button>
+        <button class="button_C" onclick="cleardisplay()">C</button>
+        <button class="button_equal" onclick="equals()">=</button>
+
+    </div>
+    
+    <div class="credits">by: carloss765  </div>
+
+
+    <script src="src/00-scripts/01-script.js"></script>
+</body>
+</html>
