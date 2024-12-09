@@ -1,19 +1,25 @@
 /*? header */
 .header {
-    background-color: rgb(172, 99, 214);
+    color: #fff; /* Texto blanco para un contraste limpio */
     width: 100%;
-    height: 100px;
-    margin-top: 0px;
+    height: 80px;
+    margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 60px;
+    font-size: 2.5rem; /* Tamaño elegante y discreto */
     text-align: center;
-    text-shadow: 1px 1px 1px black;
-
+    line-height: 80px; /* Centra verticalmente el texto */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Línea inferior suave */
 }
 
 /*? body */
 body {
-    background-color: rgb(172, 99, 214);
+    background: linear-gradient(70deg, #ff4500, #ff8c00, #ffd700, #ffcc66);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh;
     margin: 0;
     padding: 0;
 }
@@ -22,6 +28,7 @@ body {
 .display {
     width: 300px;
     height: 350px;
+    border:6px ridge rgb(199, 199, 199);
     background-color: rgb(87, 87, 87);
     border-radius: 7px;
     margin :10px auto;
@@ -32,6 +39,8 @@ body {
     padding-right: 0px;
 
 }
+
+/*? pantalla */
 .pantalla {
     background-color: rgb(155, 219, 235);
     width: 260px;
@@ -43,8 +52,9 @@ body {
     background-color: rgb(155, 219, 235);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 55px;
-    width: 260px;
+    width: 255px;
     height: 65px;
+    border-radius: 10px;
     overflow: hidden;
     resize: none;
 }
@@ -94,7 +104,7 @@ body {
     height: 50px;
     font-size: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: rgb(221, 221, 221);
+    background-color: rgb(252, 255, 79);
     margin-left : 8px;
     margin-top: 15px;
     cursor: pointer; 
@@ -147,7 +157,7 @@ body {
     font-size: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
-    background-color: rgb(221, 221, 221);
+    background-color: rgb(252, 255, 79);
     margin-left : 8px;
     margin-top: 15px;
     cursor: pointer; 
@@ -200,7 +210,7 @@ body {
     font-size: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
-    background-color: rgb(221, 221, 221);
+    background-color: rgb(252, 255, 79);
     margin-left : 8px;
     margin-top: 15px;
     cursor: pointer; 
@@ -226,7 +236,7 @@ body {
     height: 50px;
     font-size: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: rgb(221, 221, 221);
+    background-color: rgb(252, 255, 79);
     margin-left : 8px;
     margin-top: 10px;
     cursor: pointer; 
@@ -239,7 +249,7 @@ body {
     height: 50px;
     font-size: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: rgb(221, 221, 221);
+    background-color: rgb(255, 104, 104);
     margin-left : 8px;
     margin-top: 10px;
     cursor: pointer; 
@@ -253,7 +263,7 @@ body {
     font-size: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
-    background-color: rgb(221, 221, 221);
+    background-color: rgb(104, 255, 91);
     margin-left : 8px;
     margin-top: 15px;
     cursor: pointer; 
@@ -261,8 +271,11 @@ body {
 
     border-radius: 8px;
 }
+
+/*? credits */
 .credits {
-    background-color: rgb(172, 99, 214);
+    /*background-color: rgb(172, 99, 214);*/
+    background: transparent;
     width: 100%;
     height: 30px;
     margin-top: 0px;
