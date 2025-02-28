@@ -3,14 +3,15 @@
 
 <h2>🚀 Características</h2>
 <p>✔️ Interfaz moderna y minimalista.</p>
-<p>✔️ Operaciones básicas: suma, resta, multiplicación y división.</p>
+<p>✔️ Operaciones básicas: suma, resta, multiplicación, división, porcentaje, potencia y raiz.</p>
 <p>✔️ Responsive: Funciona perfectamente en dispositivos móviles y de escritorio.</p>
 <p>✔️ Fácil de usar: Diseñada para que cualquiera pueda utilizarla intuitivamente.</p>
 
 <h2>🎨 Capturas de pantalla</h2>
 <ol>Pantalla de inicio:</ol>
 
-![image](https://github.com/user-attachments/assets/e553498b-d0c4-4cbb-868d-1fcbe5478696)
+![image](https://github.com/user-attachments/assets/a1c52707-1119-4c5e-8519-f1e17d5453db)
+
 
 <h2>🛠️ Tecnologías utilizadas</h2>
 <p>Este proyecto fue desarrollado con las siguientes tecnologías:</p>
