@@ -1,289 +1,268 @@
 /*? header */
 .header {
-    color: #fff; /* Texto blanco para un contraste limpio */
+    color: #fff;
     width: 100%;
-    height: 80px;
+    height: auto;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 2.5rem; /* Tamaño elegante y discreto */
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
     text-align: center;
-    line-height: 80px; /* Centra verticalmente el texto */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Sombra sutil */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Línea inferior suave */
+    padding: 20px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 3px;
+    font-weight: bold;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 /*? body */
 body {
-    background: linear-gradient(70deg, #ff4500, #ff8c00, #ffd700, #ffcc66);
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /*? displays */
 .display {
-    width: 300px;
-    height: 350px;
-    border:6px ridge rgb(199, 199, 199);
-    background-color: rgb(87, 87, 87);
-    border-radius: 7px;
-    margin :10px auto;
-    padding: 20px;
-    padding-bottom: 5px;
-    padding-top: 30px;
-    padding-left: 0px;
-    padding-right: 0px;
-
+    width: min(90%, 350px);
+    height: auto;
+    border: none;
+    background-color: rgba(30, 30, 30, 0.9);
+    border-radius: 20px;
+    margin: 20px auto;
+    padding: 25px 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4),
+        0 5px 15px rgba(0, 0, 0, 0.3),
+        inset 0 1px 1px rgba(255, 255, 255, 0.1);
 }
 
 /*? pantalla */
 .pantalla {
-    background-color: rgb(155, 219, 235);
-    width: 260px;
-    height: 65px;
-    margin: 0 auto;
-    border-radius: 10px;
+    background-color: #222;
+    width: 100%;
+    height: 75px;
+    margin: 0 auto 20px;
+    border-radius: 12px;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
 }
+
 #display_textarea {
-    background-color: rgb(155, 219, 235);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 55px;
-    width: 255px;
-    height: 65px;
+    background-color: #222;
+    color: #fff;
+    font-family: 'Digital-7', 'Orbitron', monospace;
+    font-size: clamp(30px, 8vw, 55px);
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
     overflow: hidden;
     resize: none;
+    border: none;
+    text-align: right;
+    padding-right: 10px;
+    box-sizing: border-box;
+    caret-color: transparent;
 }
 
-/*? buttons */
-.button_7 {
-    width: 55px;
-    height: 50px;
-    font-size: 20px;
+/* Contenedor de botones */
+.buttons-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: clamp(5px, 2vw, 10px);
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Estilo común para todos los botones */
+button {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: rgb(221, 221, 221);
-    margin-left : 18px;
-    margin-top: 15px;
-    cursor: pointer; 
-    display: inline-block;
-
-    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: clamp(45px, 12vw, 55px);
+    font-size: clamp(16px, 5vw, 22px);
+    border-radius: 12px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.button_8 {
-    width: 55px;
-    height: 50px;
-    font-size: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: rgb(221, 221, 221);
-    margin-left : 8px;
-    margin-top: 15px;
-    cursor: pointer; 
-    display: inline-block;
 
-    border-radius: 8px;
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.3);
 }
-.button_9 {
-    width: 55px;
-    height: 50px;
-    font-size: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: rgb(221, 221, 221);
-    margin-left : 8px;
-    margin-top: 15px;
-    cursor: pointer; 
-    display: inline-block;
 
-    border-radius: 8px;
+button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
 }
-.button_sum {
-    width: 62px;
-    height: 50px;
-    font-size: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: rgb(252, 255, 79);
-    margin-left : 8px;
-    margin-top: 15px;
-    cursor: pointer; 
-    display: inline-block;
 
-    border-radius: 8px;
+/* Botones numéricos */
+.button_0,
+.button_1,
+.button_2,
+.button_3,
+.button_4,
+.button_5,
+.button_6,
+.button_7,
+.button_8,
+.button_9,
+.button_decimal {
+    background: linear-gradient(145deg, #3a3a3a, #2a2a2a);
+    color: white;
 }
-.button_4 {
-    width: 55px;
-    height: 50px;
-    font-size: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: rgb(221, 221, 221);
-    margin-left : 18px;
-    margin-top: 10px;
-    cursor: pointer; 
-    display: inline-block;
 
-    border-radius: 8px;
-}
-.button_5 {
-    width: 55px;
-    height: 50px;
-    font-size: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: rgb(221, 221, 221);
-    margin-left : 8px;
-    margin-top: 10px;
-    cursor: pointer; 
-    display: inline-block;
-
-    border-radius: 8px;
-}
-.button_6 {
-    width: 55px;
-    height: 50px;
-    font-size: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: rgb(221, 221, 221);
-    margin-left : 8px;
-    margin-top: 10px;
-    cursor: pointer; 
-    display: inline-block;
-
-    border-radius: 8px;
-}
-.button_less {
-    width: 62px;
-    height: 50px;
-    font-size: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
-    background-color: rgb(252, 255, 79);
-    margin-left : 8px;
-    margin-top: 15px;
-    cursor: pointer; 
-    display: inline-block;
-
-    border-radius: 8px;
-}
-.button_1 {
-    width: 55px;
-    height: 50px;
-    font-size: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: rgb(221, 221, 221);
-    margin-left : 18px;
-    margin-top: 10px;
-    cursor: pointer; 
-    display: inline-block;
-
-    border-radius: 8px;
-}
-.button_2 {
-    width: 55px;
-    height: 50px;
-    font-size: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: rgb(221, 221, 221);
-    margin-left : 8px;
-    margin-top: 10px;
-    cursor: pointer; 
-    display: inline-block;
-
-    border-radius: 8px;
-}
-.button_3 {
-    width: 55px;
-    height: 50px;
-    font-size: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: rgb(221, 221, 221);
-    margin-left : 8px;
-    margin-top: 10px;
-    cursor: pointer; 
-    display: inline-block;
-
-    border-radius: 8px;
-}
-.button_multiply {
-    width: 62px;
-    height: 50px;
-    font-size: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
-    background-color: rgb(252, 255, 79);
-    margin-left : 8px;
-    margin-top: 15px;
-    cursor: pointer; 
-    display: inline-block;
-
-    border-radius: 8px;
-}
-.button_0 {
-    width: 55px;
-    height: 50px;
-    font-size: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: rgb(221, 221, 221);
-    margin-left : 18px;
-    margin-top: 10px;
-    cursor: pointer; 
-    display: inline-block;
-
-    border-radius: 8px;
-}
+/* Botones de operaciones */
+.button_sum,
+.button_less,
+.button_multiply,
 .button_divide {
-    width: 55px;
-    height: 50px;
-    font-size: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: rgb(252, 255, 79);
-    margin-left : 8px;
-    margin-top: 10px;
-    cursor: pointer; 
-    display: inline-block;
-
-    border-radius: 8px;
+    background: linear-gradient(145deg, #ff9500, #ff7b00);
+    color: white;
 }
-.button_C {
-    width: 55px;
-    height: 50px;
-    font-size: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: rgb(255, 104, 104);
-    margin-left : 8px;
-    margin-top: 10px;
-    cursor: pointer; 
-    display: inline-block;
 
-    border-radius: 8px;
+/* Botones de operaciones especiales */
+.button_special {
+    background: linear-gradient(145deg, #7b68ee, #6a5acd);
+    color: white;
+    font-size: clamp(14px, 4vw, 20px);
 }
+
+/* Botón de igual */
 .button_equal {
-    width: 62px;
-    height: 50px;
-    font-size: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
-    background-color: rgb(104, 255, 91);
-    margin-left : 8px;
-    margin-top: 15px;
-    cursor: pointer; 
-    display: inline-block;
+    background: linear-gradient(145deg, #00c853, #00a844);
+    color: white;
+}
 
-    border-radius: 8px;
+/* Botón de borrar (ahora es parte de los botones especiales) */
+.button_C {
+    background: linear-gradient(145deg, #f44336, #d32f2f);
+    color: white;
 }
 
 /*? credits */
 .credits {
-    /*background-color: rgb(172, 99, 214);*/
     background: transparent;
     width: 100%;
-    height: 30px;
-    margin-top: 0px;
-    padding-bottom: 0px;
-    margin-right: 0px;
-    margin: 0px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 15px;
-    text-align: right;
-
+    height: auto;
+    margin: 20px 0;
+    padding: 0;
+    text-align: center;
 }
+
+.credits a {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-size: clamp(12px, 3vw, 16px);
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 8px 15px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.credits a:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.credit-text {
+    opacity: 0.8;
+    margin-right: 5px;
+}
+
+.author {
+    font-weight: bold;
+    color: #fff;
+}
+
+.github-icon {
+    margin-left: 8px;
+    font-family: 'FontAwesome';
+}
+
+/* Media queries para diferentes tamaños de pantalla */
+@media (max-width: 480px) {
+    .display {
+        margin: 10px auto;
+        padding: 15px 15px;
+    }
+
+    .pantalla {
+        height: 60px;
+        margin-bottom: 15px;
+    }
+
+    .buttons-container {
+        grid-gap: 5px;
+        padding: 5px;
+    }
+}
+
+@media (max-height: 700px) {
+    .header {
+        padding: 10px 0;
+    }
+
+    .display {
+        margin: 10px auto;
+    }
+
+    .credits {
+        margin: 10px 0;
+    }
+}
+
+/* Orientación horizontal en dispositivos móviles */
+@media (max-height: 500px) and (orientation: landscape) {
+    body {
+        flex-direction: row;
+        padding: 10px;
+    }
+
+    .header {
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+        height: auto;
+        width: auto;
+        padding: 15px 5px;
+        border-bottom: none;
+        border-left: 2px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .display {
+        margin: 0 auto;
+        height: min(95vh, 400px);
+    }
+
+    .credits {
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+        height: auto;
+        margin: 0;
+    }
+}
+
+/* Añadir FontAwesome para el icono de GitHub */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');

@@ -1,41 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Calculator</title>
     <link rel="stylesheet" href="src/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
+
 <body>
     <div class="header">CALCULATOR</div>
     <div class="display">
-        
         <div class="pantalla">
-            <textarea id="display_textarea" rows="1" cols="4"></textarea>
+            <textarea id="display_textarea" rows="1" cols="4" readonly></textarea>
         </div>
-        <button class="button_7" onclick="writenumber(7)">7</button>
-        <button class="button_8" onclick="writenumber(8)">8</button>
-        <button class="button_9" onclick="writenumber(9)">9</button>
-        <button class="button_sum" onclick="writeoperation('+')">+</button>
-        <button class ="button_4" onclick="writenumber(4)">4</button>
-        <button class="button_5" onclick="writenumber(5)">5</button>
-        <button class="button_6" onclick="writenumber(6)">6</button> 
-        <button class="button_less" onclick="writeoperation('-')">-</button>
-        <button class="button_1" onclick="writenumber(1)">1</button>
-        <button class="button_2" onclick="writenumber(2)">2</button>
-        <button class="button_3" onclick="writenumber(3)">3</button>
-        <button class="button_multiply" onclick="writeoperation('*')">*</button>
-        <button class="button_0" onclick="writenumber(0)">0</button>
-        <button class="button_divide" onclick="writeoperation('/')">/</button>
-        <button class="button_C" onclick="cleardisplay()">C</button>
-        <button class="button_equal" onclick="equals()">=</button>
+        <div class="buttons-container">
+            <!-- Primera fila - Operaciones avanzadas -->
+            <button class="button_special" onclick="cleardisplay()">C</button>
+            <button class="button_special" onclick="writeoperation('%')">%</button>
+            <button class="button_special" onclick="writeoperation('sqrt')">√</button>
+            <button class="button_special" onclick="writeoperation('^')">x²</button>
 
+            <!-- Segunda fila - Números y operaciones básicas -->
+            <button class="button_7" onclick="writenumber(7)">7</button>
+            <button class="button_8" onclick="writenumber(8)">8</button>
+            <button class="button_9" onclick="writenumber(9)">9</button>
+            <button class="button_sum" onclick="writeoperation('+')">+</button>
+
+            <button class="button_4" onclick="writenumber(4)">4</button>
+            <button class="button_5" onclick="writenumber(5)">5</button>
+            <button class="button_6" onclick="writenumber(6)">6</button>
+            <button class="button_less" onclick="writeoperation('-')">-</button>
+
+            <button class="button_1" onclick="writenumber(1)">1</button>
+            <button class="button_2" onclick="writenumber(2)">2</button>
+            <button class="button_3" onclick="writenumber(3)">3</button>
+            <button class="button_multiply" onclick="writeoperation('*')">×</button>
+
+            <button class="button_0" onclick="writenumber(0)">0</button>
+            <button class="button_decimal" onclick="writedecimal('.')">.</button>
+            <button class="button_divide" onclick="writeoperation('/')">/</button>
+            <button class="button_equal" onclick="equals()">=</button>
+        </div>
     </div>
-    
-    <flooter class="credits">
-        <p>by carloss765</p>
 
+    <footer class="credits">
+        <a href="https://github.com/carloss765" target="_blank">
+            <span class="credit-text">Creado por</span>
+            <span class="author">carloss765</span>
+            <i class="fab fa-github"></i>
+        </a>
+    </footer>
 
     <script src="src/00-scripts/01-script.js"></script>
 </body>
+
 </html>
